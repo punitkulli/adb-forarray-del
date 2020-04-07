@@ -1,0 +1,15 @@
+<form [formGroup]="processCheckListForm" class="p-2">
+  <div class="m-1">
+  <button class="btn btn-primary btn-sm" (click)="addNewRow()">+</button>
+  </div>
+<table formArrayName="itemRows3" class="table table-bordered">
+  <tbody>
+    <tr *ngFor="let control of processorCheckListForm.get('itemRows3').controls; let i=index;" formGroupName]="i"> 
+      <td>{{i}}</td>
+      <td><input formControlName="processorRemarks" class="form-control form-control-sm"></td>
+      <td><button class="btn btn-danger btn-sm" (click)="deleteRow(i)">x</button></td>
+    </tr>
+  </tbody>
+</table>
+
+</form>
