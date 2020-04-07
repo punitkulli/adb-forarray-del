@@ -34,5 +34,9 @@ ngOnInit(){
     );
 }
 
+deleteRow(i){
+  const control = (<FormArray>this.processCheckListForm.get('itemRows3'));
+  control.removeAt(i);
+}
 
 }
